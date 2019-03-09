@@ -18,9 +18,9 @@
 ###################################################################################
 
 import base64
+import binascii
 import hashlib
 import logging
-import binascii
 import tempfile
 
 from odoo import fields

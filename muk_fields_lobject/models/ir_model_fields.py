@@ -17,8 +17,8 @@
 #
 ###################################################################################
 
-from odoo import _, api, models, fields
-from odoo.exceptions import ValidationError
+from odoo import models, fields
+
 
 class IrModelField(models.Model):
     

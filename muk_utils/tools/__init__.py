@@ -17,10 +17,10 @@
 #
 ###################################################################################
 
-from . import helper
-from . import patch
-from . import parse_rst
-from . import utils_os
 from . import cache
 from . import file
+from . import helper
 from . import json
+from . import parse_rst
+from . import patch
+from . import utils_os

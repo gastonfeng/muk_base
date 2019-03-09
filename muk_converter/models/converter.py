@@ -20,9 +20,9 @@
 import hashlib
 import logging
 
-from odoo import api, models, fields
-
 from odoo.addons.muk_converter.tools import converter
+
+from odoo import api, models, fields
 
 _logger = logging.getLogger(__name__)
 

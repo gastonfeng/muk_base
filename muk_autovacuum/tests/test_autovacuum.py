@@ -17,8 +17,8 @@
 #
 ###################################################################################
 
-import logging
 import datetime
+import logging
 
 from odoo.tests import common
 from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT

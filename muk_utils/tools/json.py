@@ -17,9 +17,9 @@
 #
 ###################################################################################
 
+import datetime
 import json
 import logging
-import datetime
 
 from odoo import models, tools
 

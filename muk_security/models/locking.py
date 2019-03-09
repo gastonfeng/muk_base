@@ -17,10 +17,10 @@
 #
 ###################################################################################
 
-import os
 import hashlib
-import logging
 import itertools
+import logging
+import os
 
 from odoo import _
 from odoo import models, api, fields

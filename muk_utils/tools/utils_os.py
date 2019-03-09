@@ -17,16 +17,11 @@
 #
 ###################################################################################
 
-import os
-import io
-import base64
-import shutil
-import urllib
 import logging
-import tempfile
 import mimetypes
+import os
+import urllib
 
-from odoo.tools import config
 from odoo.tools.mimetypes import guess_mimetype
 
 _logger = logging.getLogger(__name__)

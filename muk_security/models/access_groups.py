@@ -19,11 +19,11 @@
 
 import logging
 
+from odoo.addons.muk_security.tools import helper
+
 from odoo import _, SUPERUSER_ID
 from odoo import models, api, fields
 from odoo.exceptions import AccessError
-
-from odoo.addons.muk_security.tools import helper
 
 _logger = logging.getLogger(__name__)
 

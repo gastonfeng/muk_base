@@ -17,10 +17,10 @@
 #
 ###################################################################################
 
+import logging
 import re
 import sys
 import time
-import logging
 import unicodedata
 
 _logger = logging.getLogger(__name__)

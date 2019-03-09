@@ -19,9 +19,9 @@
 
 import logging
 
-from odoo import tools
-
 from odoo.addons.muk_converter.service import unoconv
+
+from odoo import tools
 
 _logger = logging.getLogger(__name__)
 

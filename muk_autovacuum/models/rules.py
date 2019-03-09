@@ -17,19 +17,19 @@
 #
 ###################################################################################
 
-import time
-import logging
 import datetime
-import dateutil
+import logging
+import time
 
+import dateutil
 from pytz import timezone
 
 from odoo import _
 from odoo import models, api, fields
 from odoo.exceptions import ValidationError, Warning
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from odoo.tools.safe_eval import safe_eval, test_python_expr
+from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
+from odoo.tools.safe_eval import test_python_expr
 
 _logger = logging.getLogger(__name__)
 

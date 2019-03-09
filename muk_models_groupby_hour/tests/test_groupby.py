@@ -19,15 +19,8 @@
 #
 ###################################################################################
 
-import os
-import json
-import base64
 import logging
-import unittest
-import requests
 
-import odoo
-from odoo import _
 from odoo.tests import common
 
 _logger = logging.getLogger(__name__)

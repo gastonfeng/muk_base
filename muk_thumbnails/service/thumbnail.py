@@ -17,24 +17,18 @@
 #
 ###################################################################################
 
-import os
-import io
-import sys
-import PyPDF2
 import base64
-import shutil
-import urllib
+import io
 import logging
+import os
+import shutil
+import sys
 import tempfile
-import mimetypes
-
 from contextlib import closing
 
-from odoo.tools import config
-from odoo.tools.mimetypes import guess_mimetype
-
-from odoo.addons.muk_utils.tools import utils_os
+import PyPDF2
 from odoo.addons.muk_converter.service import unoconv
+from odoo.addons.muk_utils.tools import utils_os
 
 _logger = logging.getLogger(__name__)
 

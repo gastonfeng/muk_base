@@ -19,8 +19,6 @@
 
 import logging
 
-from odoo import tools
-
 from odoo.addons.muk_thumbnails.service import thumbnail
 
 _logger = logging.getLogger(__name__)

@@ -17,8 +17,8 @@
 #
 ###################################################################################
 
-import urllib
 import logging
+import urllib
 
 import requests
 import werkzeug

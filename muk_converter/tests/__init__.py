@@ -17,5 +17,5 @@
 #
 ###################################################################################
 
-from . import test_unoconv
 from . import test_converter
+from . import test_unoconv

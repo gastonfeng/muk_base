@@ -17,7 +17,7 @@
 #
 ###################################################################################
 
+from . import models
 from . import service
 from . import tools
-from . import models
 from . import wizards

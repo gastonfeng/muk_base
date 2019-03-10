@@ -17,7 +17,7 @@
 #
 ###################################################################################
 
-from . import groups
 from . import model
+from . import groups
 from . import res_groups
 from . import res_users

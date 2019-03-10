@@ -17,5 +17,5 @@
 #
 ###################################################################################
 
-from . import ir_autovacuum
 from . import rules
+from . import ir_autovacuum

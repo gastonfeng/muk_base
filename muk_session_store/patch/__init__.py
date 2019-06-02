@@ -1,5 +1,5 @@
 ###################################################################################
-# 
+#
 #    Copyright (C) 2018 MuK IT GmbH
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -17,35 +17,4 @@
 #
 ###################################################################################
 
-{
-    "name": "MuK Utils",
-    "summary": """Utility Features""",
-    "version": '11.0.1.0.16',   
-    "category": 'Extra Tools',   
-    "license": "AGPL-3",
-    "website": "https://www.mukit.at",
-    "live_test_url": "https://demo.mukit.at/web/login",
-    "author": "MuK IT",
-    "contributors": [
-        "Mathias Markl <mathias.markl@mukit.at>",
-    ],
-    "depends": [
-        "base",
-    ],
-    "data": [
-        "data/ir_cron.xml",
-    ],
-    "qweb": [
-        "static/src/xml/*.xml",
-    ],
-    "images": [
-        'static/description/banner.png'
-    ],
-    "external_dependencies": {
-        "python": [],
-        "bin": [],
-    },
-    "auto_install": True,
-    "application": False,
-    "installable": True,
-}
+from . import http

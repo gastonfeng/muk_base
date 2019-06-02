@@ -1,6 +1,6 @@
 ###################################################################################
 # 
-#    Copyright (C) 2018 MuK IT GmbH
+#    Copyright (C) 2017 MuK IT GmbH
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -16,15 +16,15 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###################################################################################
-
+ 
 {
-    "name": "MuK Utils",
-    "summary": """Utility Features""",
-    "version": '11.0.1.0.16',   
-    "category": 'Extra Tools',   
+    "name": "MuK Session Store",
+    "summary": """Session Store Options""",
+    "version": "11.0.1.0.3",
+    "category": "Extra Tools",
     "license": "AGPL-3",
-    "website": "https://www.mukit.at",
-    "live_test_url": "https://demo.mukit.at/web/login",
+    "website": "http://www.mukit.at",
+    'live_test_url': 'https://mukit.at/r/SgN',
     "author": "MuK IT",
     "contributors": [
         "Mathias Markl <mathias.markl@mukit.at>",
@@ -33,7 +33,6 @@
         "base",
     ],
     "data": [
-        "data/ir_cron.xml",
     ],
     "qweb": [
         "static/src/xml/*.xml",
@@ -45,7 +44,7 @@
         "python": [],
         "bin": [],
     },
-    "auto_install": True,
     "application": False,
     "installable": True,
+    "post_load": "_patch_system",
 }

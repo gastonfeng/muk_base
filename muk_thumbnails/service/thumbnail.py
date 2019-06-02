@@ -17,24 +17,18 @@
 #
 ###################################################################################
 
-import os
-import io
-import sys
-import PyPDF2
 import base64
-import shutil
-import urllib
+import io
 import logging
+import os
+import shutil
+import sys
 import tempfile
-import mimetypes
-
 from contextlib import closing
 
-from odoo.tools import config
-from odoo.tools.mimetypes import guess_mimetype
-
-from odoo.addons.muk_utils.tools import utils_os
+import PyPDF2
 from odoo.addons.muk_converter.service import unoconv
+from odoo.addons.muk_utils.tools import utils_os
 
 _logger = logging.getLogger(__name__)
 
@@ -45,7 +39,7 @@ except ImportError:
     Image = False
     Color = False
     _logger.warn('Cannot `import wand`.')
-    
+
 try:
     import imageio
 except ImportError:
@@ -73,23 +67,26 @@ PDF_IMPORTS = [
 WAND_IMPORTS = [
     "aai", "art", "arw", "avi", "avs", "bpg", "brf", "cals", "cgm", "cin", "cip", "cmyk", "cmyka", "svg",
     "cr2", "crw", "cur", "cut", "dcm", "dcr", "dcx", "dds", "dib", "djvu", "dng", "dot", "dpx", "tim",
-    "emf", "epdf", "epi", "eps", "eps2", "eps3", "epsf", "epsi", "ept", "exr", "fax", "fig", "fits", 
+    "emf", "epdf", "epi", "eps", "eps2", "eps3", "epsf", "epsi", "ept", "exr", "fax", "fig", "fits",
     "fpx", "gplt", "gray", "graya", "hdr", "hdr", "heic", "hpgl", "hrz", "html", "ico", "info", "ttf",
-    "inline", "isobrl", "isobrl6", "jbig", "jng", "jp2", "jpt", "j2c", "j2k", "jxr", "json", "man", "bmp", 
+    "inline", "isobrl", "isobrl6", "jbig", "jng", "jp2", "jpt", "j2c", "j2k", "jxr", "json", "man", "bmp",
     "mat", "miff", "mono", "mng", "m2v", "mpeg", "mpc", "mpr", "mrw", "msl", "mtv", "mvg", "nef", "yuv",
     "orf", "otb", "p7", "palm", "pam", "clipboard", "pbm", "pcd", "pcds", "pcl", "pcx", "pdb", "jpe",
-    "pef", "pes", "pfa", "pfb", "pfm", "pgm", "picon", "pict", "pix", "png8", "png00", "png24", "tiff", 
-    "png32", "png48", "png64", "pnm", "ppm", "ps", "ps2", "ps3", "psb", "psd", "ptif", "pwp", "rad", 
-    "raf", "rgb", "rgba", "rgf", "rla", "rle", "sct", "sfw", "sgi", "shtml", "sid", " mrsid", "jpeg", 
-    "sparse-color", "sun", "tga", "ubrl", "ubrl6", "uyvy", "vicar", "viff", "wbmp", "jpg", "png", "uil", 
+    "pef", "pes", "pfa", "pfb", "pfm", "pgm", "picon", "pict", "pix", "png8", "png00", "png24", "tiff",
+    "png32", "png48", "png64", "pnm", "ppm", "ps", "ps2", "ps3", "psb", "psd", "ptif", "pwp", "rad",
+    "raf", "rgb", "rgba", "rgf", "rla", "rle", "sct", "sfw", "sgi", "shtml", "sid", " mrsid", "jpeg",
+    "sparse-color", "sun", "tga", "ubrl", "ubrl6", "uyvy", "vicar", "viff", "wbmp", "jpg", "png", "uil",
     "wdp", "webp", "wmf", "wpg", "x", "xbm", "xcf", "xpm", "xwd", "x3f", "ycbcr", "ycbcra", "bmp3", "bmp2",
 ]
+
 
 def formats():
     return FORMATS
 
+
 def imports():
     return VIDEO_IMPORTS + PDF_IMPORTS + WAND_IMPORTS + unoconv.IMPORTS
+
 
 def create_thumbnail(binary, mimetype=None, filename=None, export="binary", format="png", page=0, frame=0,
                      animation=False, video_resize={'width': 256}, image_resize='256x256>', image_crop=None):
@@ -160,7 +157,7 @@ def create_thumbnail(binary, mimetype=None, filename=None, export="binary", form
             if os.name == 'nt':
                 tmp_wpath = tmp_wpath.replace("\\", "/")
             with closing(open(tmp_wpath, 'wb')) as file:
-                file.write(binary)    
+                file.write(binary)
             clip = VideoFileClip(tmp_wpath)
             try:
                 tmp_opath = os.path.join(tmp_dir, "output.%s" % format)

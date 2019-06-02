@@ -17,18 +17,13 @@
 #
 ###################################################################################
 
-import re
-import pytz
-import hashlib
 import logging
-import psycopg2
+
 import dateutil
-
-from odoo import _
-from odoo import models, api, fields
-from odoo.tools import ustr, pycompat, human_size
-
+import pytz
 from odoo.addons.muk_utils.tools import patch
+
+from odoo import models, api
 
 _logger = logging.getLogger(__name__)
         

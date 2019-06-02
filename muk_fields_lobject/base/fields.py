@@ -17,8 +17,8 @@
 #
 ###################################################################################
 
-from odoo import fields
-
 from odoo.addons.muk_fields_lobject.fields.lobject import LargeObject
+
+from odoo import fields
 
 fields.LargeObject = LargeObject

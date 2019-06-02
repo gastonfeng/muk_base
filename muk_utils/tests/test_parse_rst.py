@@ -17,12 +17,12 @@
 #
 ###################################################################################
 
-import os
 import logging
-
-from odoo.tests import common
+import os
 
 from odoo.addons.muk_utils.tools import parse_rst
+
+from odoo.tests import common
 
 _path = os.path.dirname(os.path.dirname(__file__))
 _logger = logging.getLogger(__name__)

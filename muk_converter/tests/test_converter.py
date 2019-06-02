@@ -17,13 +17,13 @@
 #
 ###################################################################################
 
-import os
 import logging
+import os
 import unittest
 
-from odoo.tests import common
-
 from odoo.addons.muk_converter.tools import converter
+
+from odoo.tests import common
 
 _path = os.path.dirname(os.path.dirname(__file__))
 _logger = logging.getLogger(__name__)

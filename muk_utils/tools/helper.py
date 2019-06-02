@@ -17,10 +17,10 @@
 #
 ###################################################################################
 
+import logging
 import re
 import sys
 import time
-import logging
 import unicodedata
 
 _logger = logging.getLogger(__name__)
@@ -31,7 +31,8 @@ _logger = logging.getLogger(__name__)
 
 def slugify(value):
     value = str(unicodedata.normalize('NFKD', value))
-    value = str(value.encode('ascii', 'ignore'))
+    if sys.version_info < (3,):
+        value = str(value.encode('ascii', 'ignore'))
     value = str(re.sub('[^\w\s-]', '', value).strip().lower())
     value = str(re.sub('[-\s]+', '-', value))
     return value

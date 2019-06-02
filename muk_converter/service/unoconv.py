@@ -17,25 +17,20 @@
 #
 ###################################################################################
 
-import os
-import io
 import base64
-import shutil
-import urllib
+import io
 import logging
+import os
+import shutil
 import tempfile
-import mimetypes
-
-from subprocess import Popen
-from subprocess import PIPE
-from subprocess import CalledProcessError
-
 from contextlib import closing
-
-from odoo.tools import config
-from odoo.tools.mimetypes import guess_mimetype
+from subprocess import CalledProcessError
+from subprocess import PIPE
+from subprocess import Popen
 
 from odoo.addons.muk_utils.tools import utils_os
+
+from odoo.tools import config
 
 _logger = logging.getLogger(__name__)
 

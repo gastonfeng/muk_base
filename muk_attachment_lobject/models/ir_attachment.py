@@ -23,10 +23,10 @@ import base64
 import logging
 import mimetypes
 
+from odoo.addons.muk_fields_lobject.fields.lobject import LargeObject
+
 from odoo import api, models, _
 from odoo.exceptions import AccessError
-
-from odoo.addons.muk_fields_lobject.fields.lobject import LargeObject
 
 _logger = logging.getLogger(__name__)
 

@@ -17,12 +17,12 @@
 #
 ###################################################################################
 
-import os
 import logging
-
-from odoo.tests import common
+import os
 
 from odoo.addons.muk_fields_lobject.fields.lobject import LargeObject
+
+from odoo.tests import common
 
 _path = os.path.dirname(os.path.dirname(__file__))
 _logger = logging.getLogger(__name__)

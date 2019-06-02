@@ -17,16 +17,16 @@
 #
 ###################################################################################
 
-import os
 import base64
-import uuid
 import logging
 import mimetypes
+import os
+import uuid
+
+from odoo.addons.muk_converter.tools import converter
+from odoo.addons.muk_utils.tools.http import get_response
 
 from odoo import _, api, fields, models
-
-from odoo.addons.muk_utils.tools.http import get_response
-from odoo.addons.muk_converter.tools import converter
 
 _logger = logging.getLogger(__name__)
 

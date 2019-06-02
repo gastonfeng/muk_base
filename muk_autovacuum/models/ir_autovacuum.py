@@ -17,15 +17,13 @@
 #
 ###################################################################################
 
-import time
-import logging
 import datetime
-import dateutil
+import logging
 
 from odoo import _
 from odoo import models, api
-from odoo.tools.safe_eval import safe_eval
 from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo.tools.safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)
 

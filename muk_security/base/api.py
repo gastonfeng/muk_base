@@ -19,10 +19,10 @@
 
 import logging
 
-from odoo import models, api, SUPERUSER_ID
-
-from odoo.addons.muk_utils.tools import patch
 from odoo.addons.muk_security.tools import helper
+from odoo.addons.muk_utils.tools import patch
+
+from odoo import api
 
 _logger = logging.getLogger(__name__)
 

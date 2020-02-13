@@ -20,7 +20,7 @@
 {
     "name": "MuK Security",
     "summary": """Security Features""",
-    "version": "11.0.1.1.4",
+    "version": "11.0.1.1.8",
     "category": "Extra Tools",
     "license": "AGPL-3",
     "website": "http://www.mukit.at",
@@ -50,7 +50,7 @@
         "python": [],
         "bin": [],
     },
-    "auto_install": True,
+    "auto_install": False,
     "application": False,
     "installable": True,
     "post_load": "_patch_system",

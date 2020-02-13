@@ -19,9 +19,9 @@
 
 import logging
 
-from odoo.addons.muk_fields_lobject.fields.lobject import LargeObject
-
 from odoo import api, models, fields
+
+from odoo.addons.muk_fields_lobject.fields.lobject import LargeObject
 
 _logger = logging.getLogger(__name__)
 
@@ -29,13 +29,17 @@ class Store(models.Model):
     
     _name = 'muk_converter.store'
     _description = 'Converter Store'
+    
+    #----------------------------------------------------------
+    # Database
+    #----------------------------------------------------------
 
     name = fields.Char(
         compute="_compute_name",
         string="Name",
         store=True)
 
-    used_date = fields.Date(
+    used_date = fields.Datetime(
         string="Used on",
         default=fields.Datetime.now)
     
@@ -54,6 +58,10 @@ class Store(models.Model):
     content = LargeObject(
         string="Data",
         required=True)
+   
+    #----------------------------------------------------------
+    # Read
+    #----------------------------------------------------------
    
     @api.depends('checksum', 'content_fname')
     def _compute_name(self):
